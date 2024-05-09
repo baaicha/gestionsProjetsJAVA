@@ -15,7 +15,7 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-
+// hi
 public class Form_Home extends javax.swing.JPanel {
  Connection con;
     public Form_Home() {
