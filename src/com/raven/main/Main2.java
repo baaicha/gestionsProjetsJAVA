@@ -10,6 +10,7 @@ import com.raven.form.Form_1;
 import com.raven.form.Form_2;
 import com.raven.form.Form_3;
 import com.raven.form.Form_Home;
+import com.raven.form.form_4;
 import java.awt.Color;
 import javax.swing.JComponent;
 
@@ -17,24 +18,26 @@ import javax.swing.JComponent;
  *
  * @author RAVEN
  */
-public class Main extends javax.swing.JFrame {
+public class Main2 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Main
+     * Creates new form Main2
      */
     private Form_Home home;
     private Form_1 form1;
     private Form_2 form2;
     private Form_3 form3;
+    private form_4 form4;
 
-    public Main() {
+    public Main2() {
         initComponents();
         setBackground(new Color(0, 0, 0, 0));
         home = new Form_Home();
         form1 = new Form_1();
         form2 = new Form_2();
         form3 = new Form_3();
-        menu.initMoving(Main.this);
+        form4 = new form_4();
+        menu.initMoving(Main2.this);
         menu.addEventMenuSelected(new EventMenuSelected() {
             @Override
             public void selected(int index) {
@@ -47,8 +50,10 @@ public class Main extends javax.swing.JFrame {
                 } else if (index == 3) {
                     setForm(form3);
                 }
-            }
-        });
+//                else if (index == 4) {
+//                    setForm(form4);
+//            }}
+            }});
         //  set when system open start with home form
         setForm(new Form_Home());
     }
@@ -139,20 +144,21 @@ public class Main extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Main().setVisible(true);
+                new Main2().setVisible(true);
             }
         });
     }

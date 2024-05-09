@@ -133,10 +133,10 @@ public class LoginVue extends javax.swing.JFrame {
         left.add(Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 380, 34));
         left.add(MotDePasse, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 231, 380, 34));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gestionprojet/icons8-utilisateur-24.png"))); // NOI18N
-        left.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 150, -1, -1));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/raven/icon/icons8-utilisateur-24.png"))); // NOI18N
+        left.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 40, 40));
 
-        hide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gestionprojet/icons8-cacher-24.png"))); // NOI18N
+        hide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/raven/icon/icons8-cacher-24.png"))); // NOI18N
         hide.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 hideMouseClicked(evt);
@@ -182,7 +182,7 @@ public class LoginVue extends javax.swing.JFrame {
         SignUp.getAccessibleContext().setAccessibleName("s_inscrire");
         SignUp.getAccessibleContext().setAccessibleDescription("s_inscrire");
 
-        show.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gestionprojet/iconsshow24.png"))); // NOI18N
+        show.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/raven/icon/iconsshow24.png"))); // NOI18N
         show.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 showMouseClicked(evt);
@@ -196,7 +196,7 @@ public class LoginVue extends javax.swing.JFrame {
         right.setBackground(new java.awt.Color(255, 255, 255));
         right.setPreferredSize(new java.awt.Dimension(400, 500));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gestionprojet/logob.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/raven/icon/logob.png"))); // NOI18N
         jLabel6.setText("jLabel6");
 
         javax.swing.GroupLayout rightLayout = new javax.swing.GroupLayout(right);
@@ -204,8 +204,9 @@ public class LoginVue extends javax.swing.JFrame {
         rightLayout.setHorizontalGroup(
             rightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, rightLayout.createSequentialGroup()
-                .addGap(0, 73, Short.MAX_VALUE)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(63, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         rightLayout.setVerticalGroup(
             rightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -4,7 +4,7 @@ package gestionprojet.MVCLogin;
 import gestionprojet.MVCRegister.*;
 import javax.swing.JOptionPane;
 import com.raven.form.Form_Home;
-import com.raven.main.Main;
+import com.raven.main.Main2;
 
 
 public class LoginController {
@@ -32,7 +32,7 @@ public class LoginController {
             boolean utilisateurValide = utilisateurDAO.verifierUtilisateur(email, password);
             if (utilisateurValide) {
                 // Redirection vers la vue suivante
-                 Main HomeFrame = new Main();
+                 Main2 HomeFrame = new Main2();
                  HomeFrame.setVisible(true);
                //  Main2 m=new Main2();
 

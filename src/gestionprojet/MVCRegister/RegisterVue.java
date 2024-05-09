@@ -93,7 +93,7 @@ public class RegisterVue extends javax.swing.JFrame {
         right.setBackground(new java.awt.Color(255, 255, 255));
         right.setPreferredSize(new java.awt.Dimension(400, 500));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gestionprojet/logob.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/raven/icon/logob.png"))); // NOI18N
         jLabel10.setText("jLabel6");
 
         javax.swing.GroupLayout rightLayout = new javax.swing.GroupLayout(right);

@@ -20,9 +20,9 @@ public class Form_Home extends javax.swing.JPanel {
  Connection con;
     public Form_Home() {
         initComponents();
-        card1.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/stock.png")), "Stock Total", "$200000", "Increased by 60%"));
-        card2.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/profit.png")), "Total Profit", "$15000", "Increased by 25%"));
-        card3.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/flag.png")), "Unique Visitors", "$300000", "Increased by 70%"));
+        card1.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/icons8-user-90.png")), "Profile", "", ""));
+        card2.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/icons8-newspaper-90.png")), "Annonces", "", ""));
+        card3.setData(new Model_Card(new ImageIcon(getClass().getResource("/com/raven/icon/icons8-archive-90.png")), "Archive", "", ""));
 //      jTable1.setVerticalScrollBar(new ScrollBar());
 //        jTable1.getVerticalScrollBar().setBackground(Color.WHITE);
 //        jTable1.getViewport().setBackground(Color.WHITE);
@@ -127,6 +127,11 @@ show_prj();
 
         card1.setColor1(new java.awt.Color(142, 142, 250));
         card1.setColor2(new java.awt.Color(123, 123, 245));
+        card1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                card1MouseClicked(evt);
+            }
+        });
         panel.add(card1);
 
         card2.setColor1(new java.awt.Color(186, 123, 247));
@@ -205,6 +210,14 @@ show_prj();
                 .addGap(20, 20, 20))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void card1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_card1MouseClicked
+        form_4 SignUpFrame = new form_4();
+        SignUpFrame.setVisible(true);
+        SignUpFrame.pack();
+        SignUpFrame.setLocationRelativeTo(null); 
+        
+    }//GEN-LAST:event_card1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

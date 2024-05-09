@@ -1,5 +1,6 @@
 package com.raven.component;
 
+import com.raven.event.EventMenuSelected;
 import com.raven.model.Model_Card;
 import java.awt.Color;
 import java.awt.GradientPaint;
@@ -9,6 +10,7 @@ import java.awt.RenderingHints;
 
 public class Card extends javax.swing.JPanel {
 
+   
     public Color getColor1() {
         return color1;
     }
@@ -38,8 +40,8 @@ public class Card extends javax.swing.JPanel {
     public void setData(Model_Card data) {
         lbIcon.setIcon(data.getIcon());
         lbTitle.setText(data.getTitle());
-        lbValues.setText(data.getValues());
-        lbDescription.setText(data.getDescription());
+//        lbValues.setText(data.getValues());
+//        lbDescription.setText(data.getDescription());
     }
 
     @SuppressWarnings("unchecked")
@@ -48,55 +50,36 @@ public class Card extends javax.swing.JPanel {
 
         lbIcon = new javax.swing.JLabel();
         lbTitle = new javax.swing.JLabel();
-        lbValues = new javax.swing.JLabel();
-        lbDescription = new javax.swing.JLabel();
 
         setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 6, true));
 
         lbIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/raven/icon/stock.png"))); // NOI18N
 
-        lbTitle.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        lbTitle.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
         lbTitle.setForeground(new java.awt.Color(255, 255, 255));
         lbTitle.setText("Title");
-
-        lbValues.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
-        lbValues.setForeground(new java.awt.Color(255, 255, 255));
-        lbValues.setText("Values");
-
-        lbDescription.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
-        lbDescription.setForeground(new java.awt.Color(255, 255, 255));
-        lbDescription.setText("Description");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbDescription)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbValues)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lbIcon))
-                    .addComponent(lbTitle))
-                .addContainerGap(200, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE)
+                .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lbIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lbTitle)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(2, 2, 2)
-                        .addComponent(lbIcon))
+                        .addContainerGap()
+                        .addComponent(lbIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(lbValues)))
-                .addGap(18, 18, 18)
-                .addComponent(lbDescription)
-                .addContainerGap(24, Short.MAX_VALUE))
+                        .addGap(27, 27, 27)
+                        .addComponent(lbTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -114,9 +97,7 @@ public class Card extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel lbDescription;
     private javax.swing.JLabel lbIcon;
     private javax.swing.JLabel lbTitle;
-    private javax.swing.JLabel lbValues;
     // End of variables declaration//GEN-END:variables
 }
